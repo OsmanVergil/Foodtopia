@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Foodtopia/static/css/main.deb21007.css",
+    "main.js": "/Foodtopia/static/js/main.587fea47.js",
+    "static/media/shopping-cart-svgrepo-com.svg": "/Foodtopia/static/media/shopping-cart-svgrepo-com.0c84a4e781a62729cbf646c86cc48b3f.svg",
+    "index.html": "/Foodtopia/index.html",
+    "main.deb21007.css.map": "/Foodtopia/static/css/main.deb21007.css.map",
+    "main.587fea47.js.map": "/Foodtopia/static/js/main.587fea47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.deb21007.css",
+    "static/js/main.587fea47.js"
+  ]
+}
