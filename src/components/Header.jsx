@@ -17,11 +17,11 @@ export default function Header() {
           <div className='cart-section'>
             <Link to='/cart'>
                 <img className='cart-icon' src={cartIcon} alt='иконка корзины'/>
-            </Link>
 
-            <span>
-              {totalPrice}р
-            </span>
+                <span>
+                  {totalPrice}р
+                </span>
+            </Link>
           </div>
           
 
