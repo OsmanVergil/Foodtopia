@@ -1,0 +1,38 @@
+* {
+    font-family: Roboto, Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --default-background: black;
+    --colorblind-background: white;
+
+    --default-cinnabar: #e34334;
+    --default-green: rgb(103,146,103);
+    --default-cream: #ccb4ac;
+
+    --color1: var(--default-cinnabar);
+    --color2: var(--default-green);
+    --color3: var(--default-cream);
+    --current-background: var(--default-background);
+}
+
+body {
+    background-color: var(--current-background);
+}
+
+*:has(input[value="colorblind"]:checked) * {
+    --color1: blue;
+    --color2: blue;
+    --color3: black;
+
+    --current-background: white;
+}
+
+.error-message {
+    color: var(--color3);
+    display: flex;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,49 @@
+.foodItemPage-wrapper {
+    padding-left: 50px;
+    display: flex;
+}
+
+.big-photo {
+    width: 570px;
+    border-radius: 30px;
+    margin-right: 40px;
+}
+
+.food-title {
+    color: var(--color3);
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.food-desc {
+    color: var(--color3);
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.macros {
+    display: flex;
+    flex-direction: column;
+    color: var(--color2);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.macros span {
+    margin-bottom: 7px;
+}
+
+.priceAndCart {
+    margin-top: 25px;
+    font-size: 28px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.priceAndCart span {
+    color: var(--color3)
+}
