@@ -1,14 +1,14 @@
 import React from 'react'
 import '../styles/cart.css'
-import { useDispatch, useSelector } from 'react-redux'
-import CartItem from '../components/CartItem'
-import MyButton from '../components/UI/button/MyButton'
-import { removeAll } from '../store/reducers/cartSlice'
+import CartItem from '../components/CartItem.tsx'
+import MyButton from '../components/UI/button/MyButton.tsx'
+import { removeAll } from '../store/reducers/cartSlice.ts'
+import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
 
 export default function Cart() {
-  const dispatch = useDispatch()
-  const cartItems = useSelector((state) => state.cart.products)
-  const totalPrice = useSelector((state) => state.cart.totalPrice)
+  const dispatch = useAppDispatch()
+  const cartItems = useAppSelector((state) => state.cart.products)
+  const totalPrice = useAppSelector((state) => state.cart.totalPrice)
   
   const clearCart = () => {
     dispatch(removeAll())

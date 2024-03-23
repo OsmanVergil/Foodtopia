@@ -2,10 +2,10 @@ import React from 'react'
 import cartIcon from '../icons/shopping-cart-svgrepo-com.svg'
 import '../styles/header.css'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../store/hooks.ts'
 
 export default function Header() {
-  const totalPrice = useSelector(state => state.cart.totalPrice)
+  const totalPrice = useAppSelector(state => state.cart.totalPrice)
 
   return (
     <div className='header'>

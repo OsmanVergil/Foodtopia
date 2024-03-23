@@ -1,10 +1,11 @@
 import React from 'react'
 import '../styles/cartItem.css'
-import { useDispatch } from 'react-redux';
-import { addProduct, removeProduct } from '../store/reducers/cartSlice';
+import { addProduct, removeProduct } from '../store/reducers/cartSlice.ts';
+import { cartItem } from '../types';
+import { useAppDispatch } from '../store/hooks.ts';
 
-export default function CartItem({id, title, imageUrl, price, qty}) {
-  const dispatch = useDispatch()  
+export default function CartItem({id, title, imageUrl, price, qty} : cartItem) {
+  const dispatch = useAppDispatch()  
     
     const addToCart = () => {
         dispatch(addProduct({
@@ -12,6 +13,7 @@ export default function CartItem({id, title, imageUrl, price, qty}) {
             title,
             imageUrl,
             price,
+            qty
         }))
     }
 
@@ -21,6 +23,7 @@ export default function CartItem({id, title, imageUrl, price, qty}) {
           title,
           imageUrl,
           price,
+          qty
       }))
   }
 

@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import foodService from '../API/foodService'
+import foodService, { notFoundState } from '../API/foodService.ts'
 import { useLocation } from 'react-router-dom';
 import '../styles/foodItemPage.css'
-import MyButton from '../components/UI/button/MyButton';
-import { useDispatch } from 'react-redux';
-import { addProduct } from '../store/reducers/cartSlice';
+import MyButton from '../components/UI/button/MyButton.tsx';
+import { addProduct } from '../store/reducers/cartSlice.ts';
+import { useAppDispatch } from '../store/hooks.ts';
+import { foodItem } from '../types.ts';
+
+
 
 export default function FoodItemPage() {
   const location = useLocation().pathname;
   const id = location.slice(10);
 
 
-  const [product, setProduct] = useState({nutrition: {}})
+  const [product, setProduct] = useState<foodItem>(notFoundState)
 
   const fetchProduct = async () => {
     const response = await foodService.getById(id)
@@ -21,16 +24,16 @@ export default function FoodItemPage() {
   useEffect(() => {
     fetchProduct()
   }, []) 
-  console.log(product);
 
-  const dispatch = useDispatch()  
+  const dispatch = useAppDispatch()  
     
     const addToCart = () => {
         dispatch(addProduct({
-            id,
+            id: Number(id),
             title: product.title,
             imageUrl: product.imageUrl,
             price: product.price,
+            qty: 1,
         }))
     }
 

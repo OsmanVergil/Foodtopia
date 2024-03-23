@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
+import type { PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+interface categorySliceProps {
+    category: number;
+}
+
+const initialState: categorySliceProps = {
     category: 0
 }
 
@@ -8,7 +13,7 @@ export const categorySlice = createSlice({
     name: 'category',
     initialState,
     reducers: {
-        changeCategory(state, action) {
+        changeCategory(state, action: PayloadAction<number>) {
             state.category = action.payload
         }
     }

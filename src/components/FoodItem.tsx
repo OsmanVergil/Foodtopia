@@ -1,12 +1,13 @@
 import React from 'react'
-import MyButton from './UI/button/MyButton'
+import MyButton from './UI/button/MyButton.tsx'
 import '../styles/foodItem.css'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { addProduct } from '../store/reducers/cartSlice'
+import { addProduct } from '../store/reducers/cartSlice.ts'
+import { useAppDispatch } from '../store/hooks.ts'
+import { foodItem } from '../types'
 
-export default function FoodItem({id, imageUrl, title, price}) {
-    const dispatch = useDispatch()  
+export default function FoodItem({id, imageUrl, title, price} : foodItem) {
+    const dispatch = useAppDispatch()  
     
     const addToCart = () => {
         dispatch(addProduct({
@@ -14,6 +15,7 @@ export default function FoodItem({id, imageUrl, title, price}) {
             title,
             imageUrl,
             price,
+            qty: 1,
         }))
     }
     const redirectAddress = '/foodItem/' + id;
