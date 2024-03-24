@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import '../styles/foodPage.css';
-import foodService from '../API/foodService';
-import Categories from '../components/Categories';
-import FoodList from '../components/FoodList';
-import { foodItem } from '../types';
+import { useEffect, useState } from 'react';
+import './foodPage.css';
+import foodService from '../../../shared/API/foodService';
+import Categories from '../../../entities/Categories/ui/Categories';
+import FoodList from '../../../widgets/FoodList/FoodList';
+import { foodItem } from '../../../App/types/types';
 
 export default function FoodPage() {
   const [foodList, setFoodList] = useState<foodItem[]>([]);
@@ -16,9 +16,7 @@ export default function FoodPage() {
   };
 
   useEffect(() => {
-    console.log('FPSDFOPKSDPO');
     fetchFood();
-    console.log('22222222FPSDFOPKSDPO');
   }, []);
 
   return (

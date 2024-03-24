@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { foodItem } from '../types';
+import { foodItem } from '../../App/types/types';
 
 export const notFoundState = {
   id: 0,
@@ -23,16 +23,14 @@ export const notFoundState = {
 export default class foodService {
   static async getAll() {
     try {
-        const response = await axios.get<foodItem[]>(
-            'https://6383b9836e6c83b7a99a55c5.mockapi.io/items',
-          );
-      
-          return response.data
+      const response = await axios.get<foodItem[]>(
+        'https://6383b9836e6c83b7a99a55c5.mockapi.io/items',
+      );
+
+      return response.data;
     } catch (error) {
-        console.log(error);
-        
-        }
-    
+      console.log(error);
+    }
   }
 
   static async getById(id: string) {

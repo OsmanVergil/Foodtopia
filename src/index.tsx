@@ -1,9 +1,8 @@
 import { render } from 'react-dom';
-import App from './App';
+import App from './App/App';
 import { BrowserRouter } from 'react-router-dom';
-import { store } from './store/index';
+import { store } from './shared/store/index';
 import { Provider } from 'react-redux';
-
 
 render(
   <BrowserRouter>
@@ -11,5 +10,5 @@ render(
       <App />
     </Provider>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

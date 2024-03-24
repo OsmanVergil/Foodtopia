@@ -1,23 +1,20 @@
 import React, { useMemo } from 'react';
-import FoodItem from './FoodItem';
-import { useAppSelector } from '../store/hooks';
-import { foodItem } from '../types';
+import FoodItem from '../../entities/FoodItem/ui/FoodItem';
+import { useAppSelector } from '../../shared/store/hooks';
+import { foodItem } from '../../App/types/types';
 
 interface foodListProps {
-  foodList: foodItem[]
+  foodList: foodItem[];
 }
 
-export default function FoodList({foodList} : foodListProps) {
+export default function FoodList({ foodList }: foodListProps) {
   const currentCategory = useAppSelector((state) => state.category.category);
-  console.log(Array.isArray(foodList));
 
   const sortedList = useMemo(() => {
     if (currentCategory !== 0) {
       return foodList.filter((product) => product.category === currentCategory);
     } else return foodList;
   }, [currentCategory, foodList]);
-
-  console.log(sortedList);
 
   return (
     <div className="list-wrapper">
