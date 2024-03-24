@@ -1,9 +1,9 @@
 import React from 'react'
-import MyButton from './UI/button/MyButton.tsx'
+import MyButton from './UI/button/MyButton'
 import '../styles/foodItem.css'
 import { Link } from 'react-router-dom'
-import { addProduct } from '../store/reducers/cartSlice.ts'
-import { useAppDispatch } from '../store/hooks.ts'
+import { addProduct } from '../store/reducers/cartSlice'
+import { useAppDispatch } from '../store/hooks'
 import { foodItem } from '../types'
 
 export default function FoodItem({id, imageUrl, title, price} : foodItem) {

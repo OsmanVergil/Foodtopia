@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/foodPage.css';
-import foodService from '../API/foodService.ts';
-import Categories from '../components/Categories.tsx';
-import FoodList from '../components/FoodList.tsx';
+import foodService from '../API/foodService';
+import Categories from '../components/Categories';
+import FoodList from '../components/FoodList';
 import { foodItem } from '../types';
 
 export default function FoodPage() {

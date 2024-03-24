@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/cart.css'
-import CartItem from '../components/CartItem.tsx'
-import MyButton from '../components/UI/button/MyButton.tsx'
-import { removeAll } from '../store/reducers/cartSlice.ts'
-import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
+import CartItem from '../components/CartItem'
+import MyButton from '../components/UI/button/MyButton'
+import { removeAll } from '../store/reducers/cartSlice'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
 
 export default function Cart() {
   const dispatch = useAppDispatch()

@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header.tsx';
+import Header from './components/Header';
 import './styles/app.css';
-import FoodPage from './pages/FoodPage.tsx';
-import Cart from './pages/Cart.tsx';
-import FoodItemPage from './pages/FoodItemPage.tsx';
-import ErrorPage from './pages/ErrorPage.tsx';
+import FoodPage from './pages/FoodPage';
+import Cart from './pages/Cart';
+import FoodItemPage from './pages/FoodItemPage';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (

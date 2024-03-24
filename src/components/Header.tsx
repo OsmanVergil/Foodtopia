@@ -2,7 +2,7 @@ import React from 'react'
 import cartIcon from '../icons/shopping-cart-svgrepo-com.svg'
 import '../styles/header.css'
 import { Link } from 'react-router-dom'
-import { useAppSelector } from '../store/hooks.ts'
+import { useAppSelector } from '../store/hooks'
 
 export default function Header() {
   const totalPrice = useAppSelector(state => state.cart.totalPrice)

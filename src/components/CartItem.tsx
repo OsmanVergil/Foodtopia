@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/cartItem.css'
-import { addProduct, removeProduct } from '../store/reducers/cartSlice.ts';
+import { addProduct, removeProduct } from '../store/reducers/cartSlice';
 import { cartItem } from '../types';
-import { useAppDispatch } from '../store/hooks.ts';
+import { useAppDispatch } from '../store/hooks';
 
 export default function CartItem({id, title, imageUrl, price, qty} : cartItem) {
   const dispatch = useAppDispatch()  

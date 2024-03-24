@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/categories.css'
-import { changeCategory } from '../store/reducers/categorySlice.ts'
-import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
+import { changeCategory } from '../store/reducers/categorySlice'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
 
 export default function Categories() {
     const categories = ['Все', 'Салаты', 'Супы', 'Горячие блюда', 'Гарниры', 'Десерты']

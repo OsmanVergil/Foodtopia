@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import foodService, { notFoundState } from '../API/foodService.ts'
+import foodService, { notFoundState } from '../API/foodService'
 import { useLocation } from 'react-router-dom';
 import '../styles/foodItemPage.css'
-import MyButton from '../components/UI/button/MyButton.tsx';
-import { addProduct } from '../store/reducers/cartSlice.ts';
-import { useAppDispatch } from '../store/hooks.ts';
-import { foodItem } from '../types.ts';
+import MyButton from '../components/UI/button/MyButton';
+import { addProduct } from '../store/reducers/cartSlice';
+import { useAppDispatch } from '../store/hooks';
+import { foodItem } from '../types';
 
 
 

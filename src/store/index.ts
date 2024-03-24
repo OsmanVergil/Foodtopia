@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import categoryReducer from './reducers/categorySlice.ts';
-import cartReducer from './reducers/cartSlice.ts';
+import categoryReducer from './reducers/categorySlice';
+import cartReducer from './reducers/cartSlice';
 
 const rootReducer = combineReducers({
   category: categoryReducer,

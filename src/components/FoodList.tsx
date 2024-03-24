@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import FoodItem from './FoodItem.tsx';
-import { useAppSelector } from '../store/hooks.ts';
+import FoodItem from './FoodItem';
+import { useAppSelector } from '../store/hooks';
 import { foodItem } from '../types';
 
 interface foodListProps {
